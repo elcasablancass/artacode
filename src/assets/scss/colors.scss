@@ -1,0 +1,33 @@
+// Primary Colors
+$primary-color: #4a90e2; // Modern blue
+$secondary-color: #50e3c2; // Fresh teal
+$accent-color: #f5a623; // Vibrant orange
+
+// Neutral Colors
+$white: #ffffff;
+$light-gray: #f7f9fc;
+$gray: #d1d5db;
+$dark-gray: #4b5563;
+$black: #1f2937;
+
+// Text Colors
+$text-color: $dark-gray; // Main text
+$secondary-text-color: #6b7280; // Subtle text
+
+// Background Colors
+$background-light: $light-gray;
+$background-dark: #111827;
+
+// Interactive Colors
+$hover-color: #e2effc; // Hover background
+$focus-border-color: $primary-color;
+
+// Feedback Colors
+$success-color: #10b981; // Green
+$warning-color: #f59e0b; // Yellow
+$error-color: #ef4444; // Red
+$info-color: $primary-color;
+
+// Gradient Examples
+$gradient-primary: linear-gradient(135deg, #4a90e2, #50e3c2);
+$gradient-accent: linear-gradient(135deg, #f5a623, #fbc02d);
