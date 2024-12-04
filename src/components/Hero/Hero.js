@@ -16,9 +16,10 @@ const Hero = () => {
               <span className="arta-hero__typing">Welcome to <span class="divide-text">Artacode</span></span>
             </h1>
             <p className="arta-hero__subtitle">
-              Your go-to platform for building and managing amazing websites
-              effortlessly.
+                Dynamic digital agency dedicated to transforming your ideas into stunning websites and powerful online solutions. We combine creativity, technology, and strategy to build digital experiences that captivate audiences and drive business growth.
             </p>
+
+
             <button className="arta-green-button">About Us</button>
           </div>
         </div>

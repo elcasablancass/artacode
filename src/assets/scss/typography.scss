@@ -1,0 +1,175 @@
+$base-font-size: 16px;
+$heading-font-family: 'Arial', sans-serif;
+$body-font-family: 'Helvetica', sans-serif;
+
+// Headings
+h1 {
+    font-family: $heading-font-family;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+  
+    @include breakpoints("xl") {
+      font-size: 3rem;
+    }
+  
+    @include breakpoints("lg") {
+      font-size: 2.5rem;
+    }
+  
+    @include breakpoints("md") {
+      font-size: 2rem;
+    }
+  
+    @include breakpoints("sm") {
+      font-size: 1.75rem;
+    }
+  
+    @include breakpoints("xs") {
+      font-size: 1.5rem;
+    }
+  }
+  
+  h2 {
+    font-family: $heading-font-family;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+  
+    @include breakpoints("xl") {
+      font-size: 2.5rem;
+    }
+  
+    @include breakpoints("lg") {
+      font-size: 2rem;
+    }
+  
+    @include breakpoints("md") {
+      font-size: 1.75rem;
+    }
+  
+    @include breakpoints("sm") {
+      font-size: 1.5rem;
+    }
+  
+    @include breakpoints("xs") {
+      font-size: 1.25rem;
+    }
+  }
+  
+  h3 {
+    font-family: $heading-font-family;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+
+    @include breakpoints("xl") {
+      font-size: 2rem;
+    }
+  
+    @include breakpoints("lg") {
+      font-size: 1.75rem;
+    }
+  
+    @include breakpoints("md") {
+      font-size: 1.5rem;
+    }
+  
+    @include breakpoints("sm") {
+      font-size: 1.25rem;
+    }
+  
+    @include breakpoints("xs") {
+      font-size: 1rem;
+    }
+  }
+  
+  h4 {
+    font-family: $heading-font-family;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  
+    @include breakpoints("xl") {
+      font-size: 1.75rem;
+    }
+  
+    @include breakpoints("lg") {
+      font-size: 1.5rem;
+    }
+  
+    @include breakpoints("md") {
+      font-size: 1.25rem;
+    }
+  
+    @include breakpoints("sm") {
+      font-size: 1.125rem;
+    }
+  
+    @include breakpoints("xs") {
+      font-size: 1rem;
+    }
+  }
+  
+  h5 {
+    font-family: $heading-font-family;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 0;
+  
+    @include breakpoints("xl") {
+      font-size: 1.5rem;
+    }
+  
+    @include breakpoints("lg") {
+      font-size: 1.25rem;
+    }
+  
+    @include breakpoints("md") {
+      font-size: 1.125rem;
+    }
+  
+    @include breakpoints("sm") {
+      font-size: 1rem;
+    }
+  
+    @include breakpoints("xs") {
+      font-size: 0.875rem;
+    }
+  }
+  
+  h6 {
+    font-family: $heading-font-family;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  
+    @include breakpoints("xl") {
+      font-size: 1.25rem;
+    }
+  
+    @include breakpoints("lg") {
+      font-size: 1.125rem;
+    }
+  
+    @include breakpoints("md") {
+      font-size: 1rem;
+    }
+  
+    @include breakpoints("sm") {
+      font-size: 0.875rem;
+    }
+  
+    @include breakpoints("xs") {
+      font-size: 0.75rem;
+    }
+  }
+  
+  // Paragraphs
+  p {
+    font-family: $body-font-family;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+  }
+  
