@@ -1,0 +1,118 @@
+@import '../../App.scss';
+
+.arta-hero {
+  background-color: $primary-color;
+  padding: 3rem 2rem;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; // For responsive layouts
+    gap: 2rem;
+
+    @include breakpoints(sm) {
+        flex-direction: column-reverse;
+    }
+
+    &--image {
+      flex: 1;
+      max-width: 40%;
+
+      @include breakpoints(sm) {
+        max-width: 100%;
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &--detail {
+      flex: 1;
+      max-width: 60%;
+      text-align: left;
+      color: $white;
+
+      @include breakpoints(sm) {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .divide-text {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+    @include breakpoints(sm) {
+        font-size: 1.3rem;
+    }
+
+    .arta-hero__typing {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid $accent-color;
+      animation: typing 5s steps(30, end) infinite, erase 5s 5s steps(30, end) infinite;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: $white;
+
+    @include breakpoints(sm) {
+      font-size: 1rem;
+    }
+  }
+
+  &__button {
+    background-color: $accent-color;
+    color: $white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+
+    &:focus {
+      outline: 2px solid $accent-color;
+    }
+  }
+}
+
+/* Typing Animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 70%;
+  }
+}
+
+@keyframes erase {
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 0;
+  }
+}

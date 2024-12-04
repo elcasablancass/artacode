@@ -1,11 +1,12 @@
 import React from "react";
 import "./Home.scss";
 import "../../App.scss";
+import Hero from "../../components/Hero/Hero";
 
 const Home = () => {
   return (
-    <main className="arta-container homepage">
-        
+    <main className="homepage">
+        <Hero />
     </main>
   );
 };

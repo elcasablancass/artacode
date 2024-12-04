@@ -6,11 +6,11 @@ import Home from './pages/Home/Home';
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <Header />
-      <Home />
+        <Home />
       <Footer />
-    </div>
+    </main>
   );
 }
 

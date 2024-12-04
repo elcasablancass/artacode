@@ -1,94 +1,122 @@
-/* Reset */
-@import '../../App.scss';
+@import "../../App.scss";
 
 .header {
-    background-color: $primary-color;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: $primary-color;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1000;
 
-    &__container {
+  &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-    }
+  }
 
-    &__logo {
+  &__logo {
     font-size: 1.8rem;
     font-weight: bold;
-    }
-
-    &__nav {
-    display: flex;
-    gap: 20px;
-
-    @media (max-width: 768px) {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: $primary-color;
-        padding: 10px 0;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
-        &--open {
-        display: flex;
-        }
-    }
-    }
-
-    &__link {
+    color: $white;
     text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
+  }
 
-    &:hover {
-        color: #a29bfe;
-    }
-    }
-
-    &__menu-btn {
+  &__menu-btn {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
+    flex-direction: column;
+    gap: 0.5rem;
 
-    @media (max-width: 768px) {
-        display: block;
-    }
+    @include breakpoints(sm) {
+      display: flex;
     }
 
-    &__menu-icon {
+    &--open .header__menu-icon {
+      background-color: $accent-color;
+    }
+  }
+
+  &__menu-icon {
     width: 25px;
     height: 3px;
-    background: white;
-    position: relative;
-    transition: all 0.3s;
+    background-color: $white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 
-    &::before,
-    &::after {
-        content: "";
-        width: 25px;
-        height: 3px;
-        background: white;
-        position: absolute;
-        left: 0;
-        transition: all 0.3s;
+    &:nth-child(1) {
+      transform-origin: top left;
     }
 
-    &::before {
-        top: -8px;
+    &:nth-child(3) {
+      transform-origin: bottom left;
+    }
+  }
+
+  .header__menu-btn--open {
+    .header__menu-icon:nth-child(1) {
+      transform: rotate(45deg);
     }
 
-    &::after {
-        top: 8px;
+    .header__menu-icon:nth-child(2) {
+      opacity: 0;
     }
+
+    .header__menu-icon:nth-child(3) {
+      transform: rotate(-45deg);
     }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      font-size: 1rem;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+
+    @include breakpoints(sm) {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      flex-direction: column;
+      background-color: $primary-color;
+      padding: 2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &--open {
+      @include breakpoints(sm) {
+        display: flex;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__link {
+    font-size: 1.2rem;
+    color: $white;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+  }
 }

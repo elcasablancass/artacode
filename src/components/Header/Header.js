@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Header.scss";
+import { NavLink } from "react-router";
+import ArtaLogo from "../assets/ArtaLogo";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,22 +12,30 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="header__container">
-        <h1 className="header__logo">Company Name</h1>
-        <nav className={`header__nav ${isMenuOpen ? "header__nav--open" : ""}`}>
-          <a href="#home" className="header__link">
-            Home
-          </a>
-          <a href="#about" className="header__link">
-            About
-          </a>
-          <a href="#contact" className="header__link">
-            Contact
-          </a>
-        </nav>
-        <button className="header__menu-btn" onClick={toggleMenu}>
+      <div className="header__container arta-container">
+        <NavLink to="/" className="header__logo">
+          <ArtaLogo />
+        </NavLink>
+        <button
+          className={`header__menu-btn ${isMenuOpen ? "header__menu-btn--open" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span className="header__menu-icon"></span>
+          <span className="header__menu-icon"></span>
           <span className="header__menu-icon"></span>
         </button>
+        <nav className={`header__nav ${isMenuOpen ? "header__nav--open" : ""}`}>
+          <NavLink to="/" className="header__link" onClick={() => setIsMenuOpen(false)}>
+            <i className="fas fa-home header__icon"></i> Home
+          </NavLink>
+          <NavLink to="/about" className="header__link" onClick={() => setIsMenuOpen(false)}>
+            <i className="fas fa-info-circle header__icon"></i> About
+          </NavLink>
+          <NavLink to="/contact" className="header__link" onClick={() => setIsMenuOpen(false)}>
+            <i className="fas fa-envelope header__icon"></i> Contact
+          </NavLink>
+        </nav>
       </div>
     </header>
   );
