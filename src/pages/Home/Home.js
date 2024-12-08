@@ -5,6 +5,7 @@ import Hero from "../../components/Hero/Hero";
 import Intro from "../../components/Intro/Intro";
 import Steps from "../../components/Steps/Steps";
 import Product from "../../components/Product/Product";
+import CTA from "../../components/CallToAction/CTA";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Intro />
         <Steps />
         <Product />
+        <CTA />
     </main>
   );
 };

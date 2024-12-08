@@ -25,7 +25,7 @@
             transition: 0.3s ease;
 
             &:hover {
-                transform: translateY(-5px);
+                transform: translateY(-3px);
                 transition: 0.3s ease-in;
             }
 
@@ -73,8 +73,7 @@
                     z-index: -1;
                     border-radius: 5px;
                     transform: rotate(-10deg);
-                }
-                
+                }         
             }
 
             .card-action {
