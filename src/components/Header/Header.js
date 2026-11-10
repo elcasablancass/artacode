@@ -13,7 +13,8 @@ const Header = () => {
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
-      setIsFixed(true);
+      setIsFixed(true)
+      
     } else {
       setIsFixed(false);
     }

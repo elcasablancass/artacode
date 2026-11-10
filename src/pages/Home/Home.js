@@ -6,6 +6,7 @@ import Intro from "../../components/Intro/Intro";
 import Steps from "../../components/Steps/Steps";
 import Product from "../../components/Product/Product";
 import CTA from "../../components/CallToAction/CTA";
+import Custom from "../../components/Custom/Custom";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <Steps />
         <Product />
         <CTA />
+        <Custom />
     </main>
   );
 };
